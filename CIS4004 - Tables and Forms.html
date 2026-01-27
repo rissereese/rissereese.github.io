@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+
+<HTML>
+    <style> 
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+    <head>
+        <title>
+            Tables and Forms
+        </title>
+    </head>
+
+    <!--
+        Requirements:
+
+        The form should not submit unless the user provides a value for name, phone, email, pizza size, and sauce type.
+        In addition to the "Select Size" option, the possible pizza sizes are Medium, Large, and XLarge
+        There should be at least 6 checkboxes for pizza toppings.
+        For the Favorite Video Game table, at least one vertical and at least one horizontal merged cell should be present.
+        At least 4 games should be listed.  Semantic HTML must be used.
+        The W3C Validator tool must not find any error with the markup.  A warning for the Table Border attribute is acceptable.
+        Students will push their code to their GitHub IO page and submit the URL to this assignment's solution.
+
+    -->
+
+    <body>
+        <p>
+            <h1>Pizza Ordering Form</h1>
+            <h2>Contact Information</h2>
+        </p>
+
+        <form action="/action_page.php">
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="fphone">Phone:</label>
+            <input type="text" id="fphone" name="fphone" value=""><br>
+            <label for="femail">Email:</label>
+            <input type="text" id="femail" name="femail" value=""><br>
+        </form>
+
+        <h2>Select Pizza Size</h2>
+        <label for="psize-select">Pizza Size:</label>
+        <select name="psize" id="psize-select">    
+            <option value="">--Select Size--</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
+            <option value="xl">XLarge</option>
+        </select>
+
+        <h2>Select Sauce</h2>
+        <form action="/action_page.php">
+            <input type="radio" id="marinara" value="marinara">
+            <label for="marinara">Marinara</label><br>
+            <input type="radio" id="ranch" value="ranch">
+            <label for="ranch">Ranch</label><br>
+            <input type="radio" id="ns" value="ns">
+            <label for="ns">No Sauce</label>
+        </form>
+
+        <h2>Select Toppings</h2>
+        <form action="/action_page.php">
+            <input type="checkbox" id="Mushrooms" value="Mushrooms">
+            <label for="Mushrooms">Mushrooms</label>
+            <input type="checkbox" id="Pineapple" value="Pineapple">
+            <label for="Pineapple">Pineapple</label><br>
+            <input type="checkbox" id="Ham" value="Ham">
+            <label for="Ham">Ham</label>
+            <input type="checkbox" id="Italian Sausage" value="Italian Sausage">
+            <label for="Italian Sausage">Italian Sausage</label><br>
+            <input type="checkbox" id="Spinach" value="Spinach">
+            <label for="Spinach">Spinach</label>
+            <input type="checkbox" id="Olives" value="Olives">
+            <label for="Olives">Olives</label>
+        </form>
+        
+        <h2>Additional Instructions</h2>
+        <textarea name="add instr" rows="2" cols="20">Add instructions</textarea>
+        <form action="/action_page.php">
+            <input type="submit" name="submit" id="submit">
+        </form><br>
+
+        <p>List of my Favorite Games</p>
+        <table>
+            <tr style="border: 2pc;">
+                <th>Developer</th>
+                <th>Title</th>
+                <th>Year</th>
+            </tr>
+            <tr style="text-align: left;">
+                <td>Mojang</td>
+                <td>Minecraft</td>
+                <td>2011</td>
+            </tr>
+            <tr style="text-align: left;">
+                <td rowspan="2">miHoYo</td>
+                <td>Genshin Impact</td>
+                <td>2020</td>
+            </tr>
+            <tr style="text-align: left;">
+                
+                <td>Honkai: Star Rail</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td colspan="3"style="text-align: left;">Count: 4</td>
+            </tr>
+        </table>
+
+
+
+    </body>
+
+
+</HTML>
